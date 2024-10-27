@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Completo de Python</title>
+    <style>
+        body {
+            background-color: #1e1e1e;
+            font-family: 'Arial', sans-serif;
+            color: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #2c3e50;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid #e67e22;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin: 15px 0;
+        }
+        nav a {
+            color: #e67e22;
+            margin: 0 10px;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+        }
+        nav a:hover {
+            background: rgba(231, 126, 34, 0.3);
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+        .section {
+            background: #34495e;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 45%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+        pre {
+            background-color: #2c3e50;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: #ecf0f1;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+            font-size: 0.9em;
+            color: #bdc3c7;
+        }
+        .video-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .video {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        }
+        iframe {
+            width: 100%;
+            height: 250px;
+            border: none;
+        }
+        .resources {
+            background: #2980b9;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .forum {
+            background: #27ae60;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Curso Completo de Python</h1>
+        <nav>
+            <a href="#introduccion">Introducción</a>
+            <a href="#variables">Variables</a>
+            <a href="#control-flujo">Control de Flujo</a>
+            <a href="#funciones">Funciones</a>
+            <a href="#clases-objetos">Clases y Objetos</a>
+            <a href="#modulos">Módulos y Paquetes</a>
+            <a href="#excepciones">Manejo de Excepciones</a>
+            <a href="#avanzado">Temas Avanzados</a>
+            <a href="#proyectos">Proyectos Prácticos</a>
+            <a href="#videos">Videos</a>
+            <a href="#ejercicios">Ejercicios Prácticos</a>
+            <a href="#recursos">Recursos Adicionales</a>
+            <a href="#foros">Foros de Discusión</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <div class="section" id="introduccion">
+            <h2>Introducción a Python</h2>
+            <p>Python es un lenguaje de programación de alto nivel, conocido por su simplicidad y legibilidad. Se utiliza en desarrollo web, análisis de datos, inteligencia artificial y más.</p>
+            <h3>Características de Python</h3>
+            <ul>
+                <li>Sintaxis sencilla y clara.</li>
+                <li>Amplia biblioteca estándar.</li>
+                <li>Gran comunidad y soporte.</li>
+                <li>Compatible con múltiples plataformas.</li>
+            </ul>
+        </div>
+
+        <div class="section" id="variables">
+            <h2>Variables y Tipos de Datos</h2>
+            <p>Las variables almacenan información. Python es un lenguaje de tipado dinámico, así que no necesitas declarar el tipo.</p>
+            <h3>Tipos de Datos Comunes</h3>
+            <ul>
+                <li><strong>Cadenas</strong>: Texto.</li>
+                <li><strong>Enteros</strong>: Números enteros.</li>
+                <li><strong>Flotantes</strong>: Números decimales.</li>
+                <li><strong>Booleanos</strong>: Verdadero o falso.</li>
+                <li><strong>Listas</strong>: Colecciones ordenadas y mutables.</li>
+                <li><strong>Diccionarios</strong>: Colecciones de pares clave-valor.</li>
+            </ul>
+            <h3>Ejemplos</h3>
+            <pre>
+nombre = "Juan"
+edad = 30
+altura = 1.75
+es_estudiante = True
+lista = [1, 2, 3, 4]
+diccionario = {"nombre": "Juan", "edad": 30}
+            </pre>
+        </div>
+
+        <div class="section" id="control-flujo">
+            <h2>Control de Flujo</h2>
+            <p>Las estructuras de control permiten que tu programa tome decisiones y repita acciones.</p>
+            <h3>Condicionales</h3>
+            <pre>
+if edad >= 18:
+    print("Eres mayor de edad")
+else:
+    print("Eres menor de edad")
+            </pre>
+            <h3>Bucles</h3>
+            <pre>
+for i in range(5):
+    print(i)
+
+contador = 0
+while contador < 5:
+    print(contador)
+    contador += 1
+            </pre>
+        </div>
+
+        <div class="section" id="funciones">
+            <h2>Funciones</h2>
+            <p>Las funciones son bloques de código reutilizables. Puedes definir funciones y usar funciones integradas.</p>
+            <h3>Definición de Funciones</h3>
+            <pre>
+def saludar(nombre):
+    return f"Hola, {nombre}!"
+
+print(saludar("Mundo"))
+            </pre>
+            <h3>Funciones Lambda</h3>
+            <pre>
+suma = lambda a, b: a + b
+print(suma(5, 3))  # Salida: 8
+            </pre>
+        </div>
+
+        <div class="section" id="clases-objetos">
+            <h2>Clases y Objetos</h2>
+            <p>La programación orientada a objetos permite crear estructuras complejas a través de clases y objetos.</p>
+            <pre>
+class Persona:
+    def __init__(self, nombre, edad):
+        self.nombre = nombre
+        self.edad = edad
+
+    def saludar(self):
+        return f"Hola, soy {self.nombre} y tengo {self.edad} años."
+
+p = Persona("Ana", 25)
+print(p.saludar())
+            </pre>
+        </div>
+
+        <div class="section" id="modulos">
+            <h2>Módulos y Paquetes</h2>
+            <p>Python permite organizar el código en módulos y paquetes para mejorar la legibilidad y reutilización.</p>
+            <pre>
+# Importando un módulo
+import math
+
+print(math.sqrt(16))  # Salida: 4.0
+            </pre>
+        </div>
+
+        <div class="section" id="excepciones">
+            <h2>Manejo de Excepciones</h2>
+            <p>El manejo de excepciones permite manejar errores en tiempo de ejecución de manera controlada.</p>
+            <pre>
+try:
+    resultado = 10 / 0
+except ZeroDivisionError:
+    print("No se puede dividir por cero.")
+finally:
+    print("Operación finalizada.")
+            </pre>
+        </div>
+
+        <div class="section" id="avanzado">
+            <h2>Temas Avanzados en Python</h2>
+            <h3>Programación Concurrente y Paralela</h3>
+            <p>Aprender sobre hilos y procesos para ejecutar tareas simultáneamente.</p>
+            <h3>Diseño de APIs</h3>
+            <p>Uso de frameworks como Flask o Django para crear servicios web.</p>
+            <h3>Inteligencia Artificial y Machine Learning</h3>
+            <p>Introducción a bibliotecas como TensorFlow y scikit-learn.</p>
+        </div>
+
+        <div class="section" id="proyectos">
+            <h2>Proyectos Prácticos</h2>
+            <h3>Proyecto 1: Juego de Adivinanza</h3>
+            <pre>
+import random
+
+def juego_adivinanza():
+    numero_secreto = random.randint(1, 100)
+    intentos = 0
+    adivinado = False
+
+    while not adivinado:
+        intento = int(input("Introduce tu número: "))
+        intentos += 1
+        if intento < numero_secreto:
+            print("Demasiado bajo.")
+        elif intento > numero_secreto:
+            print("Demasiado alto.")
+        else:
+            adivinado = True
+            print(f"¡Felicidades! Adivinaste en {intentos} intentos.")
+juego_adivinanza()
+            </pre>
+            <h3>Proyecto 2: Calculadora Simple</h3>
+            <pre>
+def calculadora():
+    operacion = input("Introduce la operación (+, -, *, /): ")
+    num1 = float(input("Introduce el primer número: "))
+    num2 = float(input("Introduce el segundo número: "))
+    
+    if operacion == "+":
+        print(f"Resultado: {num1 + num2}")
+    elif operacion == "-":
+        print(f"Resultado: {num1 - num2}")
+    elif operacion == "*":
+        print(f"Resultado: {num1 * num2}")
+    elif operacion == "/":
+        print(f"Resultado: {num1 / num2}")
+    else:
+        print("Operación no válida.")
+
+calculadora()
+            </pre>
+            <h3>Proyecto 3: Aplicación de Notas</h3>
+            <pre>
+notas = []
+
+def agregar_nota(nota):
+    notas.append(nota)
+
+def mostrar_notas():
+    for nota in notas:
+        print(nota)
+
+agregar_nota("Matemáticas: 90")
+agregar_nota("Historia: 85")
+mostrar_notas()
+            </pre>
+        </div>
+
+        <div class="section" id="videos">
+            <h2>Videos Tutoriales</h2>
+            <div class="video-container">
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/IimBRwHhW54" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/TbNvJYLbu4E" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <iframe src="https://www.youtube.com/embed/tCEWR_QQOfA" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="ejercicios">
+            <h2>Ejercicios Prácticos</h2>
+            <h3>Ejercicio 1: Calcular el Área de un Círculo</h3>
+            <p>Escribe un programa que pida el radio de un círculo y calcule su área.</p>
+            <pre>
+import math
+
+radio = float(input("Introduce el radio: "))
+area = math.pi * (radio ** 2)
+print(f"El área del círculo es: {area}")
+            </pre>
+            <h3>Ejercicio 2: Contador de Vocales</h3>
+            <p>Escribe un programa que cuente las vocales en una cadena de texto.</p>
+            <pre>
+texto = input("Introduce un texto: ")
+vocales = "aeiouAEIOU"
+contador = sum(1 for letra in texto if letra in vocales)
+print(f"Número de vocales: {contador}")
+            </pre>
+        </div>
+
+        <div class="section" id="recursos">
+            <h2>Recursos Adicionales</h2>
+            <div class="resources">
+                <h3>Documentación Oficial de Python</h3>
+                <p><a href="https://docs.python.org/3/" style="color: #ffffff;">docs.python.org</a></p>
+                <h3>Libros Recomendados</h3>
+                <ul>
+                    <li>"Automatiza tareas aburridas con Python" de Al Sweigart</li>
+                    <li>"Python Crash Course" de Eric Matthes</li>
+                </ul>
+                <h3>Comunidades y Foros</h3>
+                <p><a href="https://www.reddit.com/r/Python/" style="color: #ffffff;">Reddit - r/Python</a></p>
+                <p><a href="https://stackoverflow.com/questions/tagged/python" style="color: #ffffff;">Stack Overflow</a></p>
+            </div>
+        </div>
+
+        <div class="section" id="foros">
+            <h2>Foros de Discusión</h2>
+            <div class="forum">
+                <p>Únete a la comunidad y discute sobre Python, comparte tus dudas y ayuda a otros.</p>
+                <h3>Foro de Python</h3>
+                <p><a href="https://forum.python.org/" style="color: #ffffff;">forum.python.org</a></p>
+                <h3>Discord de Python</h3>
+                <p>Únete a nuestro servidor de Discord para chatear en tiempo real.</p>
+                <p><a href="https://discord.gg/python" style="color: #ffffff;">Discord Python</a></p>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Curso Completo de Python</p>
+    </footer>
+
+</body>
+</html>
